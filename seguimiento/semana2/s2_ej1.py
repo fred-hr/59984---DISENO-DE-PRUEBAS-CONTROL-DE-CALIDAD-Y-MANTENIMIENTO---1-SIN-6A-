@@ -10,7 +10,7 @@ def buscar_vuelos(origen, destino, fecha):
     return "Búsqueda exitosa"
 
 @pytest.mark.parametrize("origen,destino,fecha,esperado", [
-    ("Quito", "Guayaquil", "2025-12-01", "Búsqueda exitosa"),     # partición válida
+    ("Quito", "Guayaquil", "2026-12-01", "Búsqueda exitosa"),     # partición válida
     ("", "Guayaquil", "2025-12-01", "Error: campos vacíos"),      # origen vacío
     ("Quito", "", "2025-12-01", "Error: campos vacíos"),          # destino vacío
     ("Quito", "Guayaquil", "2024-01-01", "Error: fecha inválida") # fecha pasada
